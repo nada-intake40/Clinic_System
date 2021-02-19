@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Services\Branches\StoringBranchService;
 use App\Services\Branches\UpdatingBranchService;
 use App\Services\Branches\RetrievingBranchService;
-
+use App\Services\Branches\RetrievingAllBranchesService;
 
 class BranchContoller extends Controller
 {
@@ -33,6 +33,6 @@ class BranchContoller extends Controller
     public function update($id,StoringBranchRequest $request , UpdatingBranchService $service)
     {
         $service->execute($id, $request);
-        return redirect()->route('Branch.index');
+        return redirect()->route('Branches.index');
     }
 }
