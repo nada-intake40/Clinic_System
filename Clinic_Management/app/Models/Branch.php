@@ -10,9 +10,9 @@ class Branch extends Model
     use HasFactory;
     protected $fillable =['name','address','clinic','phone_no'];
 
-    function phones()
+    function clinic()
     {
-        return $this->hasMany('App\Models\Phone');
+        return $this->belongTo('App\Models\Clinic');
     }
 
 }
