@@ -7,16 +7,18 @@ use App\Services\Branches\StoringBranchService;
 use App\Services\Branches\UpdatingBranchService;
 use App\Services\Branches\RetrievingBranchService;
 use App\Services\Branches\RetrievingAllBranchesService;
+use App\Http\Requests\StoringBranchRequest;
 
-class BranchContoller extends Controller
+class BranchController extends Controller
 {
     public function index(RetrievingAllBranchesService $service)
     {
+       
         return view('Branches.index',['branches' => $service->execute()]);
     }
 
-    public function create(){
-        return view('Branches.create');
+    public function create($id){
+        return view('Branches.create',['clinic'=>$id]);
     }
 
     public function store(StoringBranchRequest $request , StoringBranchService $service)
@@ -32,7 +34,7 @@ class BranchContoller extends Controller
 
     public function update($id,StoringBranchRequest $request , UpdatingBranchService $service)
     {
-        $service->execute($id, $request);
-        return redirect()->route('Branches.index');
+        $service->execute($id, $request->validated());
+        return redirect()->route('branches.index');
     }
 }

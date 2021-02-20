@@ -17,7 +17,7 @@ class RetrievingClinicService {
 
     public function execute($id)
     {    
-        if (!$this->repo->getById($id) != null)
+        if ($this->repo->getById($id) != null)
         {
             return $this->repo->getById($id);
         }

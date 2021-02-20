@@ -4,7 +4,7 @@ namespace App\Repositories;
 
 use App\Models\Branch;
 
-class ClinicRepository extends BaseRepository
+class BranchRepository extends BaseRepository
 {
     public function __construct(Branch $branch)
     {

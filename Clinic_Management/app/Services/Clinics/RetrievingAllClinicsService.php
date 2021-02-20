@@ -17,7 +17,7 @@ class RetrievingAllClinicsService {
 
     public function execute()
     {    
-        if (!$this->repo->getAll()->isEmpty())
+        if ($this->repo->getAll())
         {
             return $this->repo->getAll()->paginate(5);
         }

@@ -1,4 +1,4 @@
-@extends('../Layouts')
+@extends('../base')
 
 @section('content')
 

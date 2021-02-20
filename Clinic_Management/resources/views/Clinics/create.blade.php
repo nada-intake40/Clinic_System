@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="form-group row" style="margin:8px 15px;">
-                <label class="col-md-2 offset-md-1 col-form-label" for="website"></label>
+                <label class="col-md-2 offset-md-1 col-form-label" for="website">website</label>
                 <div class="col-md-8">
                     <input class="form-control @error('website') is-invalid @enderror" id="website" type="url" name="website" value="{{old('website')}}" placeholder="Enter your Clinic Website." required>
                     @error('website')
@@ -30,7 +30,7 @@
             <div class="form-group row" style="margin:8px 15px;">
                 <label class="col-md-2 offset-md-1 col-form-label px-2" for="desciption">Description</label>
                 <div class="col-md-8">
-                    <textarea class="form-control @error('description') is-invalid @enderror" id="desciption" name="notes" rows="10" cols="30">Enter your Clinic Description here .</textarea>
+                    <textarea class="form-control @error('description') is-invalid @enderror" id="desciption" name="description" rows="10" cols="30">Enter your Clinic Descript.</textarea>
                     @error('desciption')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror

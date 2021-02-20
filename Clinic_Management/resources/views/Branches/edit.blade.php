@@ -1,14 +1,15 @@
 @extends('../base')
 @section('content')
 <div class='col-10 offset-1'>
-    <div class='card'>
+    <div class='card my-5 mx-5'>
         <div class='card-header text-info'>
              <strong>Branch Form</strong>
         </div>
 <!-- ########################################################################################################## -->
         <div class='card-body' >
-        <form class="form-horizontal" action="{{route('clinic.store')}}" method="POST">
+        <form class="form-horizontal" action="{{route('branch.update',['id'=> $branch->id])}}" method="POST">
         @csrf
+        @method("PUT")
             <div class="form-group row" style="margin:8px 15px;">
                 <label class="col-md-2 offset-md-1 col-form-label" for="name">Branch Name</label>
                 <div class="col-md-8">
@@ -38,9 +39,9 @@
             </div>
             <input type="hidden" name="clinic" value="{{$branch->clinic}}">
 <!-- ############################################################################################# -->
-        <div class="card-footer" style="margin:8px 15px;">
+        <div class="card-footer" >
             <button class="btn btn-md btn-outline-success" type="submit"> Submit</button>
-            <a class="btn btn-md btn-outline-danger" href="{{route(branches.index)}}"> Go Back</a>
+            <a class="btn btn-md btn-outline-danger" href="{{route('branches.index')}}"> Go Back</a>
         </div>
         </form>
   </div>

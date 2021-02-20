@@ -18,8 +18,8 @@ class CreateBranchesTable extends Migration
             $table->string('name',100);
             $table->string('address',200);
             $table->string('phone_no',150)->unique();
-            $table->unsignedBigInteger('clinic');
-            $table->foreign('clinic')->references('id')->on('clinics')->onDelete('cascade');
+            $table->unsignedBigInteger('clinic_id');
+            $table->foreign('clinic_id')->references('id')->on('clinics')->onDelete('cascade');
             $table->timestamps();
         });
     }

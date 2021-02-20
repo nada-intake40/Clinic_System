@@ -10,7 +10,7 @@ class Clinic extends Model
     use HasFactory;
     protected $fillable =['name','description','website'];
 
-    function branch()
+    function branches()
     {
         return $this->hasMany('App\Models\Branch');
     }

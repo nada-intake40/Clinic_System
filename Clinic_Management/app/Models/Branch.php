@@ -12,7 +12,7 @@ class Branch extends Model
 
     function clinic()
     {
-        return $this->belongTo('App\Models\Clinic');
+        return $this->belongsTo('App\Models\Clinic');
     }
 
 }

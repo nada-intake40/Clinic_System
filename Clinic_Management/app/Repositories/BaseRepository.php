@@ -19,7 +19,7 @@ class BaseRepository{
 
     public function getAll()
     {
-        return $this->model->get();
+        return $this->model::orderBy('id','asc');
     }
 
 

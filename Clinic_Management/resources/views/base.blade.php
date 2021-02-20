@@ -26,8 +26,8 @@
           </button>
                 <div class="collapse navbar-collapse" id="navbarToggle">
                     <div class="navbar-nav text-right">
-                        <a class="nav-item nav-link text-white mx-3" href="{% url 'positions_list' %}">Position</a>
-                        <a class="nav-item nav-link text-white mx-3" href="{% url 'departments_list' %}">Department</a>
+                        <a class="nav-item nav-link text-white mx-3" href="{{route('clinics.index')}}">Clinics</a>
+                        <a class="nav-item nav-link text-white mx-3" href="{{route('branches.index')}}">Branches</a>
                     </div>
                 </div>
             </div>

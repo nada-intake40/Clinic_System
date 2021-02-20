@@ -7,18 +7,18 @@ use App\Services\Clinics\RetrievingAllClinicsService;
 use App\Services\Clinics\RetrievingClinicService;
 use App\Services\Clinics\StoringClinicService;
 use App\Services\Clinics\UpdatingClinicService;
+use App\Http\Requests\StoringClinicRequest;
 
-
-
-class ClinicContoller extends Controller
+class ClinicController extends Controller
 {
     public function index(RetrievingAllClinicsService $service)
     {
         return view('Clinics.index',['clinics' => $service->execute()]);
     }
 
-    public function show (RetrievingClinicService $service , $id){
-        return $service->execute($id);
+    public function show (RetrievingClinicService $service , $id)
+    {
+        return view('Clinics.show',['clinic'=>$service->execute($id)]);
     }
 
     public function create(){
