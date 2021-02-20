@@ -37,13 +37,14 @@
                 </div>
             </div>
             <input type="hidden" name="clinic" value="{{$clinic}}">
+        </div>
 <!-- ############################################################################################# -->
-        <div class="card-footer" style="margin:8px 15px;">
-            <button class="btn btn-md btn-outline-success" type="submit"> Submit</button>
+        <div class="card-footer">
+            <button class="btn btn-md btn-outline-success ml-5" type="submit"> Submit</button>
             <button class="btn btn-md btn-outline-danger" type="reset"> Reset</button>
         </div>
         </form>
   </div>
   
-
+</div>
 @endsection

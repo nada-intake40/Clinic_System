@@ -38,12 +38,14 @@
                 </div>
             </div>
             <input type="hidden" name="clinic" value="{{$branch->clinic}}">
+        </div>
 <!-- ############################################################################################# -->
         <div class="card-footer" >
-            <button class="btn btn-md btn-outline-success" type="submit"> Submit</button>
+            <button class="btn btn-md btn-outline-success ml-5" type="submit"> Submit</button>
             <a class="btn btn-md btn-outline-danger" href="{{route('branches.index')}}"> Go Back</a>
         </div>
         </form>
+  </div>
   </div>
   
 

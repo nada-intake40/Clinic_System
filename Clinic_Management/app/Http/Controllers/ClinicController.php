@@ -38,7 +38,7 @@ class ClinicController extends Controller
 
     public function update($id,StoringClinicRequest $request , UpdatingClinicService $service)
     {
-        $service->execute($id, $request);
-        return redirect()->route('Clinics.index');
+        $service->execute($id, $request->validated());
+        return redirect()->route('clinics.index');
     }
 }

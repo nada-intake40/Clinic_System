@@ -36,6 +36,7 @@
                     @enderror
                 </div>
             </div>
+        </div>
 <!-- ############################################################################################# -->
         <div class="card-footer" style="margin:8px 15px;">
             <button class="btn btn-md btn-outline-success" type="submit"> Submit</button>
@@ -44,5 +45,5 @@
         </form>
   </div>
   
-
+</div>
 @endsection
